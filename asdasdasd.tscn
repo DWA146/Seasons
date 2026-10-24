@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d2evoy5k6jhlp"]
+
+[ext_resource type="PackedScene" uid="uid://drn2e8ag1pwdo" path="res://mountain2.blend" id="1_iqlpl"]
+
+[node name="Node3D" type="Node3D" unique_id=1375079035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0037469864, 0)
+
+[node name="mountain2" parent="." unique_id=1014215919 instance=ExtResource("1_iqlpl")]
+transform = Transform3D(0.8879551, 0, -0.4599301, 0, 1, 0, 0.4599301, 0, 0.8879551, 7.6123657, -0.0037469864, 10.259125)
+
+[node name="Camera" parent="mountain2" index="0" unique_id=1836507625]
+transform = Transform3D(-1.4896754, -0.21609074, -2.5950284, -1.6093254e-06, 2.9896526, -0.2489506, 2.6040096, -0.123617135, -1.4845374, -13.8172865, 2.0422485, -9.621797)
+metadata/_edit_group_ = true
+
+[node name="Landscape" parent="mountain2" index="1" unique_id=1806260609]
+transform = Transform3D(2.6979098, 0, 1.3119755, 0, 3, 0, -1.3119755, 0, 2.6979098, 25.66474, -2.0516052, 8.583179)
+metadata/_edit_group_ = true
+
+[node name="Sun" parent="mountain2" index="2" unique_id=703654894]
+transform = Transform3D(0.13017204, -0.66594774, 0.7345535, 0.8234334, 0.48528352, 0.29403645, -0.5522796, 0.56658053, 0.611534, 53.516487, 6.893795, 39.498188)
+light_energy = 0.0
+metadata/_edit_group_ = true
+
+[editable path="mountain2"]
