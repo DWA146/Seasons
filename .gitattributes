@@ -1,2 +1,9 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+/mountain2-baked.blend filter=lfs diff=lfs merge=lfs -text
+/mountain2-baked.blend1 filter=lfs diff=lfs merge=lfs -text
+/mountain2-baked.glb filter=lfs diff=lfs merge=lfs -text
+/mountain2-baked2.glb filter=lfs diff=lfs merge=lfs -text
+/mountain2.blend filter=lfs diff=lfs merge=lfs -text
+/mountain2.blend1 filter=lfs diff=lfs merge=lfs -text
+/textures/kloppenheim_06_puresky_8k.exr filter=lfs diff=lfs merge=lfs -text
