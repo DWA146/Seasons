@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bu17mafed6kj5" path="res://mountain2.blend" id="1_iqlpl"]
 [ext_resource type="Texture2D" uid="uid://ce8pqy7xdlby" path="res://textures/mountain_baked.png" id="2_u3k4l"]
-[ext_resource type="Texture2D" uid="uid://b07f82ygo3wrv" path="res://textures/Mountain2-baked.png" id="4_u3k4l"]
 [ext_resource type="Texture2D" uid="uid://dcmqi7n3atyil" path="res://textures/stone-172_height.jpg" id="4_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmq1v7072cid6" path="res://textures/kloppenheim_06_puresky_8k.exr" id="5_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmhb6nd713up1" path="res://title.png" id="6_26p3p"]
@@ -12,13 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bv5y3j7dq07uf" path="res://CREDITS.png" id="9_rvp8f"]
 [ext_resource type="Texture2D" uid="uid://dpk8rmrrctvb8" path="res://QUIT.png" id="10_koo13"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8lmc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0us53"]
 albedo_texture = ExtResource("2_u3k4l")
-metallic_specular = 0.2
-normal_scale = -0.06
-normal_texture = ExtResource("4_u3k4l")
-rim = 0.0
-clearcoat = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e8e7"]
 albedo_texture = ExtResource("4_u8lmc")
@@ -61,7 +55,7 @@ fov = 22.9
 near = 0.01
 
 [node name="Landscape" parent="mountain3" index="1" unique_id=315140871]
-material_override = SubResource("StandardMaterial3D_u8lmc")
+material_overlay = SubResource("StandardMaterial3D_0us53")
 
 [node name="Sun" parent="mountain3" index="2" unique_id=1471903390]
 transform = Transform3D(0.86133283, -0.3293291, 0.38684386, 0.18863109, 0.91431975, 0.35838214, -0.47172463, -0.23571552, 0.8496553, -40.31635, 11.532405, 82.12648)
