@@ -19,12 +19,18 @@ jobs:
     # Needed to release dev-XYZ build on releases
     permissions:
       contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
           lfs: true
+
 
       - name: Export game
         id: export
@@ -53,7 +59,14 @@ jobs:
           generateReleaseNotes: true
           tag: dev-${{ github.run_number }}
           artifacts: ${{ steps.export.outputs.archive_directory }}/*
-      - name: Release Github pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: upload pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: ${{ steps.export.outputs.build_directory }}/web
+          path: ${{ steps.export.outputs.build_directory}}/web
+
+      - name: deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+
+        
