@@ -15,12 +15,6 @@ run/main_scene="uid://cxk0d0jhh61"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/stretch/scale_mode="fractional"
 
-[display]
-
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

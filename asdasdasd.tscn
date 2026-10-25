@@ -2,14 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://bu17mafed6kj5" path="res://mountain2.blend" id="1_iqlpl"]
 [ext_resource type="Texture2D" uid="uid://ce8pqy7xdlby" path="res://textures/mountain_baked.png" id="2_u3k4l"]
+[ext_resource type="Texture2D" uid="uid://bxkd46xrwwnda" path="res://textures/Snow_baked.png" id="2_x3aln"]
+[ext_resource type="Texture2D" uid="uid://k5j4k75opacb" path="res://textures/Rock037_4K-JPG_Color.jpg" id="3_rvp8f"]
 [ext_resource type="Texture2D" uid="uid://dcmqi7n3atyil" path="res://textures/stone-172_height.jpg" id="4_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmq1v7072cid6" path="res://textures/kloppenheim_06_puresky_8k.exr" id="5_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmhb6nd713up1" path="res://title.png" id="6_26p3p"]
 [ext_resource type="Script" uid="uid://dsaa5ebsbj461" path="res://control.gd" id="6_x3aln"]
 [ext_resource type="Texture2D" uid="uid://dvx11m2ahefh1" path="res://PLAY.png" id="7_ho8x1"]
-[ext_resource type="Texture2D" uid="uid://x0ctbrporhhc" path="res://SETTINGS.png" id="8_x3aln"]
-[ext_resource type="Texture2D" uid="uid://bv5y3j7dq07uf" path="res://CREDITS.png" id="9_rvp8f"]
-[ext_resource type="Texture2D" uid="uid://dpk8rmrrctvb8" path="res://QUIT.png" id="10_koo13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kttf6"]
+albedo_texture = ExtResource("2_x3aln")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_koo13"]
+albedo_texture = ExtResource("3_rvp8f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0us53"]
 albedo_texture = ExtResource("2_u3k4l")
@@ -26,105 +31,148 @@ energy_multiplier = 0.5
 
 [sub_resource type="Sky" id="Sky_noxli"]
 sky_material = SubResource("PanoramaSkyMaterial_3e8e7")
+process_mode = 1
 
 [sub_resource type="Environment" id="Environment_wvx66"]
 resource_local_to_scene = true
 background_mode = 2
-background_energy_multiplier = 0.74
+background_energy_multiplier = 1.36
 sky = SubResource("Sky_noxli")
 sky_rotation = Vector3(0, 1.6318829, 0)
+ambient_light_energy = 0.0
+reflected_light_source = 2
+glow_enabled = true
+glow_intensity = 2.75
+glow_strength = 0.81
+glow_bloom = 0.2
+glow_blend_mode = 2
+glow_hdr_threshold = 0.6
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 0.0
+glow_map_strength = 0.57
 fog_mode = 1
 fog_light_color = Color(0.78257483, 0.7740859, 0.7611366, 1)
 fog_light_energy = 1.12
 fog_sun_scatter = 0.02
 fog_density = 0.475
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0007
-volumetric_fog_albedo = Color(0.099985994, 0.099985994, 0.099985994, 1)
-volumetric_fog_emission = Color(1, 1, 1, 1)
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.24840015, 0.24840018, 0.24840015, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 0.13
+volumetric_fog_anisotropy = 0.9
+volumetric_fog_detail_spread = 0.59460366
+volumetric_fog_ambient_inject = 0.34
 
 [node name="Node3D" type="Node3D" unique_id=1375079035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0037469864, 0)
+
+[node name="mountain2" parent="." unique_id=37595332 instance=ExtResource("1_iqlpl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0037469864, -2.7888527)
+
+[node name="Camera" parent="mountain2" index="0" unique_id=973151582]
+transform = Transform3D(-0.31742394, -0.039061397, -0.94747895, 1.0784714e-06, 0.99915123, -0.04119204, 0.94828373, -0.01307636, -0.3171545, -68.900955, 2.5284038, 0.9490452)
+
+[node name="Landscape" parent="mountain2" index="1" unique_id=315140871]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -45.731964, 2.0859916, 7.649807)
+material_override = SubResource("StandardMaterial3D_kttf6")
+
+[node name="Sun" parent="mountain2" index="2" unique_id=1471903390]
+transform = Transform3D(0.86133283, -0.32932907, 0.3868439, 0.18863109, 0.91431975, 0.3583821, -0.47172466, -0.23571551, 0.8496553, -49.063606, 35.817505, 23.26978)
+light_energy = 0.0
+
+[node name="background_004" parent="mountain2" index="3" unique_id=658007458]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 1.6220233, 2.7972908)
+material_override = SubResource("StandardMaterial3D_koo13")
+
+[node name="background_002" parent="mountain2" index="4" unique_id=1384107953]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 0.0051100254, 2.7972908)
 
 [node name="mountain3" parent="." unique_id=1520368059 instance=ExtResource("1_iqlpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.439999, -0.0037469864, -22.894701)
 
 [node name="Camera" parent="mountain3" index="0" unique_id=973151582]
+transform = Transform3D(-0.31742394, -0.039061397, -0.9474789, 1.0784714e-06, 0.99915123, -0.041192036, 0.94828373, -0.01307636, -0.3171545, -68.900955, 2.5284038, -1.8398075)
 current = true
 fov = 22.9
 near = 0.01
 
 [node name="Landscape" parent="mountain3" index="1" unique_id=315140871]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -45.731964, 2.0859916, 4.8609524)
 material_overlay = SubResource("StandardMaterial3D_0us53")
 
 [node name="Sun" parent="mountain3" index="2" unique_id=1471903390]
-transform = Transform3D(0.86133283, -0.3293291, 0.38684386, 0.18863109, 0.91431975, 0.35838214, -0.47172463, -0.23571552, 0.8496553, -40.31635, 11.532405, 82.12648)
+transform = Transform3D(0.86133283, -0.32932907, 0.38684386, 0.18863109, 0.91431975, 0.35838214, -0.47172463, -0.23571554, 0.8496553, -49.063606, 35.817505, 75.86568)
 light_color = Color(3.7639997, 3.178497, 2.5108972, 1)
 light_energy = 1.075
 
 [node name="background_004" parent="mountain3" index="3" unique_id=658007458]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 1.6220233, 0.00843811)
 material_override = SubResource("StandardMaterial3D_3e8e7")
+
+[node name="background_002" parent="mountain3" index="4" unique_id=1384107953]
+transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 0.0051100254, 0.00843811)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1608582328]
 environment = SubResource("Environment_wvx66")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1991614698]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1875388637]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1875388637 node_paths=PackedStringArray("spring_camera", "winter_camera")]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 409.0
-offset_bottom = 179.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("6_x3aln")
+spring_camera = NodePath("../../mountain3/Camera")
+winter_camera = NodePath("../../mountain2/Camera")
 
-[node name="MainMenuUI" type="Control" parent="CanvasLayer/Control" unique_id=391703936]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MainMenuUI" type="MarginContainer" parent="CanvasLayer/Control" unique_id=380748732]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
-[node name="Title" type="Sprite2D" parent="CanvasLayer/Control/MainMenuUI" unique_id=1757608455]
-position = Vector2(561, 176)
-scale = Vector2(0.4, 0.4)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MainMenuUI" unique_id=929218456]
+layout_mode = 2
 texture = ExtResource("6_26p3p")
+stretch_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/MainMenuUI" unique_id=2003067995]
-layout_mode = 0
-offset_left = 205.0
-offset_top = 346.0
-offset_right = 2119.0
-offset_bottom = 821.0
-scale = Vector2(0.4, 0.4)
-columns = 2
-
-[node name="playButton" type="TextureButton" parent="CanvasLayer/Control/MainMenuUI/GridContainer" unique_id=1393172421]
+[node name="playButton" type="TextureButton" parent="CanvasLayer/Control/MainMenuUI" unique_id=1393172421]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
 texture_normal = ExtResource("7_ho8x1")
-
-[node name="settingsButton" type="TextureButton" parent="CanvasLayer/Control/MainMenuUI/GridContainer" unique_id=224034152]
-layout_mode = 2
-texture_normal = ExtResource("8_x3aln")
-
-[node name="creditsButton" type="TextureButton" parent="CanvasLayer/Control/MainMenuUI/GridContainer" unique_id=1543185384]
-layout_mode = 2
-texture_normal = ExtResource("9_rvp8f")
-
-[node name="quitButton" type="TextureButton" parent="CanvasLayer/Control/MainMenuUI/GridContainer" unique_id=788043630]
-layout_mode = 2
-texture_normal = ExtResource("10_koo13")
 
 [node name="PlayMenuUI" type="Control" parent="CanvasLayer/Control" unique_id=2126773774]
 visible = false
-anchors_preset = 0
-offset_left = 2.0
-offset_right = 42.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/PlayMenuUI" unique_id=1537306220]
-layout_mode = 0
-offset_left = 479.00003
-offset_top = 326.0
-offset_right = 538.0
-offset_bottom = 392.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -206.0
+offset_right = 67.0
+offset_bottom = -140.0
+grow_vertical = 0
 scale = Vector2(3, 3)
 
 [node name="SpringButton" type="Button" parent="CanvasLayer/Control/PlayMenuUI/GridContainer" unique_id=87962994]
@@ -136,6 +184,9 @@ text = "Spring
 layout_mode = 2
 text = "winter"
 
-[connection signal="pressed" from="CanvasLayer/Control/MainMenuUI/GridContainer/playButton" to="CanvasLayer/Control" method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MainMenuUI/playButton" to="CanvasLayer/Control" method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PlayMenuUI/GridContainer/SpringButton" to="CanvasLayer/Control" method="_on_spring_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PlayMenuUI/GridContainer/WinterButton" to="CanvasLayer/Control" method="_on_winter_button_pressed"]
 
+[editable path="mountain2"]
 [editable path="mountain3"]
