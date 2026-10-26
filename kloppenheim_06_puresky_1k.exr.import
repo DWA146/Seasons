@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmq1v7072cid6"
-path.bptc="res://.godot/imported/kloppenheim_06_puresky_8k.exr-5306d94314a4b7aa37f8d47ba1a9f08a.bptc.ctex"
+uid="uid://crdn14du2kadi"
+path.bptc="res://.godot/imported/kloppenheim_06_puresky_1k.exr-f988b0453cb2f8fc54a0c423ce6e892d.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/kloppenheim_06_puresky_8k.exr"
-dest_files=["res://.godot/imported/kloppenheim_06_puresky_8k.exr-5306d94314a4b7aa37f8d47ba1a9f08a.bptc.ctex"]
+source_file="res://kloppenheim_06_puresky_1k.exr"
+dest_files=["res://.godot/imported/kloppenheim_06_puresky_1k.exr-f988b0453cb2f8fc54a0c423ce6e892d.bptc.ctex"]
 
 [params]
 

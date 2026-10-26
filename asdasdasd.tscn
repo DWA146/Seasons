@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ce8pqy7xdlby" path="res://textures/mountain_baked.png" id="2_u3k4l"]
 [ext_resource type="Texture2D" uid="uid://bxkd46xrwwnda" path="res://textures/Snow_baked.png" id="2_x3aln"]
 [ext_resource type="Texture2D" uid="uid://dcmqi7n3atyil" path="res://textures/stone-172_height.jpg" id="4_u8lmc"]
-[ext_resource type="Texture2D" uid="uid://cmq1v7072cid6" path="res://textures/kloppenheim_06_puresky_8k.exr" id="5_u8lmc"]
+[ext_resource type="Texture2D" uid="uid://crdn14du2kadi" path="res://kloppenheim_06_puresky_1k.exr" id="5_ruabm"]
 [ext_resource type="Texture2D" uid="uid://cmhb6nd713up1" path="res://title.png" id="6_26p3p"]
 [ext_resource type="Script" uid="uid://dsaa5ebsbj461" path="res://control.gd" id="6_x3aln"]
 [ext_resource type="Texture2D" uid="uid://dvx11m2ahefh1" path="res://PLAY.png" id="7_ho8x1"]
@@ -26,19 +26,21 @@ albedo_texture = ExtResource("4_u8lmc")
 metallic = 1.0
 metallic_specular = 1.0
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3e8e7"]
-panorama = ExtResource("5_u8lmc")
-energy_multiplier = 0.5
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ruabm"]
+panorama = ExtResource("5_ruabm")
+energy_multiplier = 1.7
 
 [sub_resource type="Sky" id="Sky_noxli"]
-sky_material = SubResource("PanoramaSkyMaterial_3e8e7")
+sky_material = SubResource("PanoramaSkyMaterial_ruabm")
 process_mode = 1
+radiance_size = 2
 
 [sub_resource type="Environment" id="Environment_wvx66"]
 resource_local_to_scene = true
 background_mode = 2
 background_energy_multiplier = 1.36
 sky = SubResource("Sky_noxli")
+sky_custom_fov = 52.5
 sky_rotation = Vector3(0, 1.6318829, 0)
 ambient_light_energy = 0.0
 reflected_light_source = 2
