@@ -39,6 +39,9 @@ jobs:
           wget -q $URL
           mkdir ~/blender
           tar -xf $FILENAME -C ~/blender/ --strip-components=1
+          ls -la ~/blender
+          realpath ~/blender
+          ~/blender/blender --version
 
           mkdir -p ~/.config/godot
           touch ~/.config/godot/editor_settings-4.tres
