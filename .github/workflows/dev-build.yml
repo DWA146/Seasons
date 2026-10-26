@@ -36,7 +36,8 @@ jobs:
           URL=https://download.blender.org/release/Blender5.0/blender-5.0.0-linux-x64.tar.xz
           FILENAME=blender-5.0.0-linux-x64.tar.xz
 
-          wget $URL
+          wget -q $URL
+          mkdir ~/blender
           tar -xf $FILENAME -C ~/blender/ --strip-components=1
 
           mkdir -p ~/.config/godot
