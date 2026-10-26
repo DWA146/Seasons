@@ -30,8 +30,25 @@ jobs:
         uses: actions/checkout@v5
         with:
           lfs: true
+          
+      - name: Install and link blender
+        run : |
+          URL=https://download.blender.org/release/Blender5.0/blender-5.0.0-linux-x64.tar.xz
+          FILENAME=blender-5.0.0-linux-x64.tar.xz
 
+          wget $URL
+          tar -xf $FILENAME -C ~/blender/ --strip-components=1
 
+          mkdir -p ~/.config/godot
+          touch ~/.config/godot/editor_settings-4.7.tres
+
+          cat > ~/.config/godot/editor_settings-4.7.tres <<EOF
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          filesystem/import/blender/blender_path = "~/blender/blender"
+          EOF
+          
       - name: Export game
         id: export
         uses: firebelley/godot-export@v8.0.0
