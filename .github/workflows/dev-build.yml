@@ -41,9 +41,9 @@ jobs:
           tar -xf $FILENAME -C ~/blender/ --strip-components=1
 
           mkdir -p ~/.config/godot
-          touch ~/.config/godot/editor_settings-4.7.tres
+          touch ~/.config/godot/editor_settings-4.tres
 
-          cat > ~/.config/godot/editor_settings-4.7.tres <<EOF
+          cat > ~/.config/godot/editor_settings-4.tres <<EOF
           [gd_resource type="EditorSettings" format=3]
 
           [resource]
