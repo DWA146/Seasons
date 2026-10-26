@@ -50,7 +50,7 @@ jobs:
           [gd_resource type="EditorSettings" format=3]
 
           [resource]
-          filesystem/import/blender/blender_path = "~/blender/blender"
+          filesystem/import/blender/blender_path = "/home/runner/blender/blender"
           EOF
           
       - name: Export game
