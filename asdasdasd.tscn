@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cxk0d0jhh61"]
 
-[ext_resource type="PackedScene" uid="uid://bu17mafed6kj5" path="res://mountain2.blend" id="1_iqlpl"]
+[ext_resource type="PackedScene" uid="uid://ch56ws431ga4j" path="res://mountain2.blend" id="1_iqlpl"]
 [ext_resource type="Texture2D" uid="uid://ce8pqy7xdlby" path="res://textures/mountain_baked.png" id="2_u3k4l"]
 [ext_resource type="Texture2D" uid="uid://bxkd46xrwwnda" path="res://textures/Snow_baked.png" id="2_x3aln"]
-[ext_resource type="Texture2D" uid="uid://k5j4k75opacb" path="res://textures/Rock037_4K-JPG_Color.jpg" id="3_rvp8f"]
 [ext_resource type="Texture2D" uid="uid://dcmqi7n3atyil" path="res://textures/stone-172_height.jpg" id="4_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmq1v7072cid6" path="res://textures/kloppenheim_06_puresky_8k.exr" id="5_u8lmc"]
 [ext_resource type="Texture2D" uid="uid://cmhb6nd713up1" path="res://title.png" id="6_26p3p"]
@@ -13,17 +12,19 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kttf6"]
 albedo_texture = ExtResource("2_x3aln")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ruabm"]
+load_path = "res://.godot/imported/Rock037_4K-JPG_Color.jpg-e80e2f88b486cb95fe31da5c48806a84.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_koo13"]
-albedo_texture = ExtResource("3_rvp8f")
+albedo_texture = SubResource("CompressedTexture2D_ruabm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0us53"]
 albedo_texture = ExtResource("2_u3k4l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e8e7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3tlh"]
 albedo_texture = ExtResource("4_u8lmc")
-metallic_specular = 0.0
-normal_enabled = true
-normal_scale = -16.0
+metallic = 1.0
+metallic_specular = 1.0
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3e8e7"]
 panorama = ExtResource("5_u8lmc")
@@ -70,47 +71,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0037469864, 0)
 [node name="mountain2" parent="." unique_id=37595332 instance=ExtResource("1_iqlpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0037469864, -2.7888527)
 
-[node name="Camera" parent="mountain2" index="0" unique_id=973151582]
+[node name="Camera" parent="mountain2" index="0" unique_id=288654692]
 transform = Transform3D(-0.31742394, -0.039061397, -0.94747895, 1.0784714e-06, 0.99915123, -0.04119204, 0.94828373, -0.01307636, -0.3171545, -68.900955, 2.5284038, 0.9490452)
 
-[node name="Landscape" parent="mountain2" index="1" unique_id=315140871]
+[node name="Landscape" parent="mountain2" index="1" unique_id=859364890]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -45.731964, 2.0859916, 7.649807)
 material_override = SubResource("StandardMaterial3D_kttf6")
 
-[node name="Sun" parent="mountain2" index="2" unique_id=1471903390]
+[node name="Sun" parent="mountain2" index="2" unique_id=628087122]
 transform = Transform3D(0.86133283, -0.32932907, 0.3868439, 0.18863109, 0.91431975, 0.3583821, -0.47172466, -0.23571551, 0.8496553, -49.063606, 35.817505, 23.26978)
 light_energy = 0.0
 
-[node name="background_004" parent="mountain2" index="3" unique_id=658007458]
+[node name="background_004" parent="mountain2" index="3" unique_id=1237860424]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 1.6220233, 2.7972908)
 material_override = SubResource("StandardMaterial3D_koo13")
 
-[node name="background_002" parent="mountain2" index="4" unique_id=1384107953]
+[node name="background_002" parent="mountain2" index="4" unique_id=1392009085]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 0.0051100254, 2.7972908)
 
 [node name="mountain3" parent="." unique_id=1520368059 instance=ExtResource("1_iqlpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.439999, -0.0037469864, -22.894701)
 
-[node name="Camera" parent="mountain3" index="0" unique_id=973151582]
+[node name="Camera" parent="mountain3" index="0" unique_id=288654692]
 transform = Transform3D(-0.31742394, -0.039061397, -0.9474789, 1.0784714e-06, 0.99915123, -0.041192036, 0.94828373, -0.01307636, -0.3171545, -68.900955, 2.5284038, -1.8398075)
 current = true
 fov = 22.9
 near = 0.01
 
-[node name="Landscape" parent="mountain3" index="1" unique_id=315140871]
+[node name="Landscape" parent="mountain3" index="1" unique_id=859364890]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -45.731964, 2.0859916, 4.8609524)
 material_overlay = SubResource("StandardMaterial3D_0us53")
 
-[node name="Sun" parent="mountain3" index="2" unique_id=1471903390]
+[node name="Sun" parent="mountain3" index="2" unique_id=628087122]
 transform = Transform3D(0.86133283, -0.32932907, 0.38684386, 0.18863109, 0.91431975, 0.35838214, -0.47172463, -0.23571554, 0.8496553, -49.063606, 35.817505, 75.86568)
 light_color = Color(3.7639997, 3.178497, 2.5108972, 1)
 light_energy = 1.075
 
-[node name="background_004" parent="mountain3" index="3" unique_id=658007458]
+[node name="background_004" parent="mountain3" index="3" unique_id=1237860424]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 1.6220233, 0.00843811)
-material_override = SubResource("StandardMaterial3D_3e8e7")
+material_override = SubResource("StandardMaterial3D_b3tlh")
 
-[node name="background_002" parent="mountain3" index="4" unique_id=1384107953]
+[node name="background_002" parent="mountain3" index="4" unique_id=1392009085]
 transform = Transform3D(0.9977584, 0, 0, 0, 0.9977584, 0, 0, 0, 0.9977584, -0.048517227, 0.0051100254, 0.00843811)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1608582328]
