@@ -4,7 +4,17 @@ This is my first project for Terra.
 
 Nature Room is a small 3D environment project made using Blender and Godot. It features two environments: a snowy winter landscape and a lush spring landscape.
 
-## SCREENSHOTS
+## How to play
+
+I've uploaded the project to itch.io, alongside Windows and Linux ARM executables in the latest release.
+There are three buttons in total, allowing you switch between the two environments:
+
+- **Winter:**
+- **Spring:**
+
+**Performance note:** The game can take a while to load, but it should run ok on itch https://dwa146.itch.io/seasons
+
+## Screenshots
 
 **Winter:**
 <img width="1149" height="636" alt="image" src="https://github.com/user-attachments/assets/01a58e21-7292-4c7b-aa12-698a4dd05368" />
@@ -12,23 +22,14 @@ Nature Room is a small 3D environment project made using Blender and Godot. It f
 **Spring:**
 <img width="1148" height="644" alt="image" src="https://github.com/user-attachments/assets/63ea33d8-31ba-465b-a106-89aa15efa681" />
 
-## HOW TO PLAY
 
-I've uploaded the project to itch.io, alongside Windows and Linux ARM executables in the latest release.
-There are three buttons in total, allowing you to navigate the game and switch between the two environments:
-
-- **Winter:** A snowy landscape.
-- **Spring:** A green, lush landscape.
-
-**Performance note:** The game can take a while to load on some systems, particularly the main menu. It runs instantly on my PC, so I'm not entirely sure what's causing this, but it does eventually work! Please be patient.
-
-## HOW IT WORKS
+## How it works
 
 Most of the modelling, materials and texturing were done in Blender. I used Blender's shader nodes to create the materials and baked them into image textures for use in Godot.
 In Godot, the two environments are separate scenes. Clicking a button switches between them, keeping the same general fog and lighting while changing the textures to create the different seasons.
 I also used Godot's node system to create the GUI and handle the buttons.
 
-## WHY I MADE IT
+## Why i made it
 
 I wanted to make something involving 3D modelling and challenge myself to create something that looked as good as possible. I also wanted to learn new Blender skills and get familiar with Godot, as I'd never used it before.
 The nature theme was mainly inspired by Terra's overall theme.
