@@ -29,12 +29,12 @@ Most of the modelling, materials and texturing were done in Blender. I used Blen
 In Godot, the two environments are separate scenes. Clicking a button switches between them, keeping the same general fog and lighting while changing the textures to create the different seasons.
 I also used Godot's node system to create the GUI and handle the buttons.
 
-## Why i made it
+## Why I made it
 
 I wanted to make something involving 3D modelling and challenge myself to create something that looked as good as possible. I also wanted to learn new Blender skills and get familiar with Godot, as I'd never used it before.
 The nature theme was mainly inspired by Terra's overall theme.
 
-## WHAT I LEARNED
+## What I learnt
 
 I learnt the basics of Godot nodes, and making functional GUI
 I learnt how to model terrain in blender & bake textures from shader nodes
