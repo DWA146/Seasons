@@ -12,7 +12,12 @@ There are three buttons in total, allowing you switch between the two environmen
 - **Winter:**
 - **Spring:**
 
-**Performance note:** The game can take a while to load, but it should run ok on itch https://dwa146.itch.io/seasons
+**Performance note:** The game can take a while to load, but it should run ok on (Itch)(https://dwa146.itch.io/seasons)
+
+### Latest release
+(Web)(https://dwa146.itch.io/seasons)
+(Windows)(https://github.com/DWA146/Seasons/releases)
+(Linucks)(https://github.com/DWA146/Seasons/releases)
 
 ## Screenshots
 
