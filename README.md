@@ -1,20 +1,41 @@
-READ ME!
 
-hey its me, its DWA 
 
-This is my first project for tera
+This is my first project for Terra.
 
-HOW TO USE
+Nature Room is a small 3D environment project made using Blender and Godot. It features two environments: a snowy winter landscape and a lush spring landscape.
 
-I uploaded it on itch aswell as the windows and linux arm executables in the latest release!
-FYI due to my lack of understanding about godot, the game runs VERY SLOW like the main menu takes a really long time to load but it still works and have tested on a priv window just be patient
-i really dont understand why it does that tho on my pc it runs instantly but idrk know much bout anything tbh, maybe because of the blend files being a bit large?
+## SCREENSHOTS
 
-There isnt much functionality in the game just 3 buttons!
-You can swap between a snowy winter landscape or a lush spring landscape!
-i spent most the time making the files and mapping textures so its probably not the most realistic thing ever but i think its not bad
+**Winter:**
+<img width="1149" height="636" alt="image" src="https://github.com/user-attachments/assets/01a58e21-7292-4c7b-aa12-698a4dd05368" />
 
-HOW IT WORKS
+**Spring:**
+<img width="1148" height="644" alt="image" src="https://github.com/user-attachments/assets/63ea33d8-31ba-465b-a106-89aa15efa681" />
 
-When you clip a different button you swap to a different scene with the same fog & lighting just mapped with different textures!
-The materials are set up straight from blender's shader nodes just baked as an image
+## HOW TO PLAY
+
+I've uploaded the project to itch.io, alongside Windows and Linux ARM executables in the latest release.
+There are three buttons in total, allowing you to navigate the game and switch between the two environments:
+
+- **Winter:** A snowy landscape.
+- **Spring:** A green, lush landscape.
+
+**Performance note:** The game can take a while to load on some systems, particularly the main menu. It runs instantly on my PC, so I'm not entirely sure what's causing this, but it does eventually work! Please be patient.
+
+## HOW IT WORKS
+
+Most of the modelling, materials and texturing were done in Blender. I used Blender's shader nodes to create the materials and baked them into image textures for use in Godot.
+In Godot, the two environments are separate scenes. Clicking a button switches between them, keeping the same general fog and lighting while changing the textures to create the different seasons.
+I also used Godot's node system to create the GUI and handle the buttons.
+
+## WHY I MADE IT
+
+I wanted to make something involving 3D modelling and challenge myself to create something that looked as good as possible. I also wanted to learn new Blender skills and get familiar with Godot, as I'd never used it before.
+The nature theme was mainly inspired by Terra's overall theme.
+
+## WHAT I LEARNED
+
+I learnt the basics of Godot nodes, and making functional GUI
+I learnt how to model terrain in blender & bake textures from shader nodes
+
+Thanks for checking out my project!
